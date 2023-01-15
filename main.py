@@ -4,10 +4,6 @@ import game
 import final
 
 
-def abort():
-    pygame.quit()
-
-
 def main():
     pygame.init()
     pygame.display.set_caption('Слабое звено')
@@ -15,7 +11,7 @@ def main():
     screen = pygame.display.set_mode(size)
     names = []
     if not start.main(names, screen):
-        return abort()
+        return pygame.quit()
     pygame.quit()
 
 
