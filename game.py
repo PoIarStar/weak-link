@@ -22,6 +22,12 @@ class Window:
         self.cur.execute('SELECT * FROM questions')
         self.questions = self.cur.fetchall()
         shuffle(self.questions)
+        self.turned = 0
+
+    def get_coords(self, coords):
+        if coords[0] in range(750, 800) and coords[1] in range (450, 500) and not self.timer:
+            self.start()
+        elif coords
 
 
 def main(names, screen):
