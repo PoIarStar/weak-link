@@ -10,16 +10,22 @@ def main():
     size = 800, 450
     screen = pygame.display.set_mode(size)
     names = []
+
     if not start.main(names, screen):
         return pygame.quit()
-    if not game.main(names, screen):
+
+    statistic = game.main(names, screen)
+
+    if not statistic:
         return pygame.quit()
+
     final.main()
 
 
 try:
     if __name__ == '__main__':
         main()
+
 except Exception as e:
     print(e)
     pygame.quit()
