@@ -19,7 +19,7 @@ def main():
     if not statistic:
         return pygame.quit()
 
-    final.main()
+    final.main(screen, statistic)
 
 
 try:

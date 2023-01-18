@@ -7,7 +7,7 @@ from time import time
 class Window:
     def __init__(self, names):
         self.round = 5
-        self.players = [[True, (200 + 300 * (i % 2), 10 + i // 2 * 50), names[i], 0, 0, 0] for i in range(8)]
+        self.players = [[True, (200 + 300 * (i % 2), 10 + i // 2 * 50), names[i], 0, 0, 0, 0] for i in range(8)]
         self.bank = [{'value': 0, 'disable': (50, 400, 100, 50), 'enable': (50, 400, 100, 50)},
                      {'value': 1000, 'disable': (50, 350, 100, 50), 'enable': (50, 370, 100, 50)},
                      {'value': 2000, 'disable': (50, 300, 100, 50), 'enable': (50, 340, 100, 50)},
@@ -166,4 +166,6 @@ def main(names, screen):
             t_prev = int(time())
 
         if all(window.final):
-            return window.players
+            window.players[0][-1] = window.bank[0]['value']
+            players = [window.players[i][-5:] for i in range(8)]
+            return players
