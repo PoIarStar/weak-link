@@ -2,6 +2,9 @@ import pygame
 
 
 def main(screen, statistic):
+    '''
+    Вывод таблицы результатов
+    '''
     stat = [['имя', 'правильных ответов', 'ошибок', 'сохранено денег', 'выигрыш']]
     stat.extend(statistic)
     pygame.init()

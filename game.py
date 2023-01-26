@@ -5,6 +5,9 @@ from time import time
 
 
 class Window:
+    '''
+    Класс, отвечающий за игру
+    '''
     def __init__(self, names):
         self.round = 5
         self.players = [[True, (200 + 300 * (i % 2), 10 + i // 2 * 50), names[i], 0, 0, 0, 0] for i in range(8)]
@@ -94,6 +97,9 @@ class Window:
 
 
 def main(names, screen):
+    '''
+    Обработка игровых процессов
+    '''
     def draw():
         screen.fill((40, 0, 45))
         font = pygame.font.Font(None, 20)

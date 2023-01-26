@@ -5,6 +5,9 @@ import final
 
 
 def main():
+    '''
+    Основная функция
+    '''
     pygame.init()
     pygame.display.set_caption('Слабое звено')
     size = 800, 450

@@ -2,6 +2,9 @@ import pygame
 
 
 class Names:
+    '''
+    Класс, хранящий список имён
+    '''
     def __init__(self, names: list):
         self.names = names
         self.borders = [(100, 40 + 40 * i, 600, 20) for i in range(8)]
@@ -33,6 +36,9 @@ class Names:
 
 
 def main(names, screen):
+    '''
+    Функция, отвечающая за экран ввода имён участников
+    '''
     def draw():
         screen.fill((40, 0, 45))
         font = pygame.font.Font(None, 40)
